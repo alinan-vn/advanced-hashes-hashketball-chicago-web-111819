@@ -161,33 +161,19 @@ def shoe_size(player)
   end
 end
 
-def team_colors(team_name)
-  
-  hash = game_hash
-  array = []
-  hash.each do |location, attributes|
-    if hash[location].values.include?(team_name)
-      attributes.each do |attribute, info|
-        if attribute == :colors
-          return info
-        end
+def team_colors(team)
+  hash_look = game_hash
+  hash_look.each do |where, innards|
+    innards.each do |name|
+      
+      if name.include?(team)
+        binding.pry
+        return hash_look[where][:colors]
       end
+      
     end
-  end
-  
-  
-  # hash_look = game_hash
-  # hash_look.each do |where, innards|
-  #   innards.each do |name|
-      
-  #     if name.include?(team)
-  #       binding.pry
-  #       return hash_look[where][:colors]
-  #     end
-      
-  #   end
     
-  # end
+  end
   
   
 end 
