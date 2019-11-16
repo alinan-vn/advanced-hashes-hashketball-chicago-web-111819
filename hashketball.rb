@@ -321,7 +321,7 @@ def winning_team
     return hash_look[0][:team_name]
   elsif home_points < away_points
     return hash_look[1][:team_name]
-  
+  end
 end 
 
 
