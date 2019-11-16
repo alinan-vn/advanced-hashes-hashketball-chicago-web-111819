@@ -161,7 +161,7 @@ def shoe_size(player)
   end
 end
 
-def team_colors(team)
+def team_colors(team_name)
   
   hash = game_hash
   array = []
