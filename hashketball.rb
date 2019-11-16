@@ -353,7 +353,16 @@ def player_with_longest_name
   return name
 end
 
-
+def long_name_steals_a_ton?
+  hash_look = game_hash
+  inner_hash_home = hash_look[:home][:players]
+  inner_hash_away = hash_look[:away][:players]
+  
+  long_name = player_with_longest_name #Bismack dude
+  
+  
+  
+end
 
 
 
