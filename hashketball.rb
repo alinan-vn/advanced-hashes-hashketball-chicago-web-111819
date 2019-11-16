@@ -319,9 +319,9 @@ def winning_team
   binding.pry 
   
   if away_points < home_points
-    return hash_look[0][:team_name]
+    return hash_look[:home][:team_name]
   elsif home_points < away_points
-    return hash_look[1][:team_name]
+    return hash_look[:away][:team_name]
   end
 end 
 
