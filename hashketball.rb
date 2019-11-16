@@ -177,7 +177,7 @@ def team_names
   return teams
 end
 
-def player_numbers(player)
+def player_numbers(team)
   hash_look = game_hash
   array = []
   if hash_look[:home][:team_name] == team 
