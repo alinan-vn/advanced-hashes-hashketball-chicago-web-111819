@@ -168,13 +168,13 @@ def team_colors(team)
       
       if name.include?(team)
         binding.pry
-        return hash_look[where][:colors]
+        thing = hash_look[where][:colors]
       end
       
     end
     
   end
-  
+  binding.pry
   
 end 
 
