@@ -239,6 +239,33 @@ def player_stats(player)
   end
 end
 
+def big_shoe_rebounds
+  hash_look = game_hash
+  inner_hash_home = hash_look[:home][:players]
+  inner_hash_away = hash_look[:away][:players]
+  
+  shoe_size = 0 
+  rebounds = 0 
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    if inner_hash_home[i][:shoe] > shoe_size
+      shoe_size = inner_hash_home[i][:shoe]
+      rebounds = inner_hash_home[i][:rebounds]
+    end
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    if inner_hash_away[i][:shoe] > shoe_size
+      shoe_size = inner_hash_away[k][:shoe]
+      rebounds = inner_hash_away[k][:rebounds]
+    end
+    k += 1
+  end
+end
+
 
 
 
