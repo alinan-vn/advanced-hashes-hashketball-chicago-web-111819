@@ -274,24 +274,27 @@ def most_points_scored
   inner_hash_away = hash_look[:away][:players]
   
   points_scored = 0 
+  name = " "
   
   i = 0 
   while i < inner_hash_home.length do 
     if (points_scored < inner_hash_home[i][:points])
       points_scored = inner_hash_home[i][:points]
+      name = inner_hash_home[i][:player_name]
     end
     i += 1
   end
   
   k = 0 
   while k < inner_hash_away.length do 
-    if (points_scored < inner_hash_home[k][:points])
-      points_scored = inner_hash_home[k][:points]
+    if (points_scored < inner_hash_away[k][:points])
+      points_scored = inner_hash_away[k][:points]
+      name = inner_hash_away[k][:player_name]
     end
     k += 1
   end
   
-  return rebounds
+  return name
 end 
 
 
