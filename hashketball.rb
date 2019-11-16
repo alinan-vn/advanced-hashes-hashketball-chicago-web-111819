@@ -163,13 +163,11 @@ end
 
 def team_colors(team)
   hash_look = game_hash
-  i = 0 
-  while i < hash_look.length do 
-    if hash_look[i][:team_name] == team 
-      return hash_look[i][:colors]
-    end 
-    i += 1
-  end 
+  if hash_look[:home][:team_name] == team 
+    return hash_look[:home][:colors]
+  elsif hash_look[:away][:team_name] == team 
+    return hash_look[:away][:colors]
+  end
 end 
 
 
