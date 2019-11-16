@@ -172,28 +172,21 @@ def team_colors(team)
   return array
 end 
 
-
-
-# if hash_look[:home][:team_name] == team 
-#     return hash_look[:home][:colors]
-#   elsif hash_look[:away][:team_name] == team 
-#     return hash_look[:away][:colors]
-
+def team_names
+  teams = [game_hash[:home][:team_name],  game_hash[:away][:team_name]]
+  return teams
+end
 
 
 
 
-# hash_look.each do |where, innards|
-#     innards.each do |name|
-      
-#       if name.include?(team)
-#         binding.pry
-#         return hash_look[where][:colors]
-#       end
-      
-#     end
-    
-#   end
+
+
+
+
+
+
+
 
 
 
