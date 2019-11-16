@@ -324,7 +324,34 @@ def winning_team
   end
 end 
 
-
+def player_with_longest_name
+  hash_look = game_hash
+  inner_hash_home = hash_look[:home][:players]
+  inner_hash_away = hash_look[:away][:players]
+  
+  name_length = 0 
+  name = " "
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    if (name_length < inner_hash_home[i][:player_name].length)
+      points_scored = inner_hash_home[i][:player_name].length
+      name = inner_hash_home[i][:player_name]
+    end
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    if (name_length < inner_hash_away[k][:player_name].length)
+      points_scored = inner_hash_away[k][:player_name].length
+      name = inner_hash_away[k][:player_name]
+    end
+    k += 1
+  end
+  
+  return name
+end
 
 
 
