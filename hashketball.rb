@@ -183,13 +183,13 @@ def player_numbers(team)
   if hash_look[:home][:team_name] == team 
     i = 0 
     while i < hash_look[:home][:players].length do 
-      arrray << hash_look[:home][:players][i][:number]
+      array << hash_look[:home][:players][i][:number]
       i += 1
     end
   elsif hash_look[:away][:team_name] == team 
     i = 0 
     while i < hash_look[:away][:players].length do 
-      arrray << hash_look[:away][:players][i][:number]
+      array << hash_look[:away][:players][i][:number]
       i += 1
     end
   end
