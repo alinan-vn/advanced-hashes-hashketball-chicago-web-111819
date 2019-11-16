@@ -297,7 +297,32 @@ def most_points_scored
   return name
 end 
 
-
+def winning_team
+  hash_look = game_hash
+  inner_hash_home = hash_look[:home][:players]
+  inner_hash_away = hash_look[:away][:players]
+  
+  home_points = 0 
+  away_points = 0 
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    home_points += inner_hash_home[i][:points]
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    away_points += inner_hash_away[k][:points]
+    k += 1
+  end
+  
+  if home_points > away_points
+    return hash_look[0][:team_name]
+  elsif home_points < away_points
+    return hash_look[1][:team_name]
+  
+end 
 
 
 
