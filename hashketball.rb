@@ -317,7 +317,7 @@ def winning_team
     k += 1
   end
   
-  if home_points > away_points
+  if away_points < home_points
     return hash_look[0][:team_name]
   elsif home_points < away_points
     return hash_look[1][:team_name]
