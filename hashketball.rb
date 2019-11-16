@@ -285,9 +285,8 @@ def most_points_scored
   
   k = 0 
   while k < inner_hash_away.length do 
-    if (shoe_size < inner_hash_away[k][:shoe]) 
-      shoe_size = inner_hash_away[k][:shoe]
-      rebounds = inner_hash_away[k][:rebounds]
+    if (points_scored < inner_hash_home[k][:points])
+      points_scored = inner_hash_home[k][:points]
     end
     k += 1
   end
