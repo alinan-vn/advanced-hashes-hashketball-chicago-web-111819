@@ -165,7 +165,7 @@ def team_colors(team)
   hash_look = game_hash
   hash_look.each do |where, innards|
     innards.each do |name|
-      binding.pry
+      
       if name.include?(team)
         return hash_look[where][:colors]
       end
