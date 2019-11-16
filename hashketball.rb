@@ -206,7 +206,14 @@ def player_stats(player)
   while i < inner_hash_home.length do 
     if inner_hash_home[i][:player_name] == player
       stat_hash = {
-        
+        :number => 0,
+        :shoe => 16,
+        :points => 22,
+        :rebounds => 12,
+        :assists => 12,
+        :steals => 3,
+        :blocks => 1,
+        :slam_dunks => 1
       }
       return inner_hash_home[i]
     end
