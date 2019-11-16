@@ -179,24 +179,16 @@ end
 
 def player_numbers(player)
   hash_look = game_hash
-  inner_hash_home = hash_look[:home][:players]
-  inner_hash_away = hash_look[:away][:players]
-  
-  i = 0 
-  while i < inner_hash_home.length do 
-    if inner_hash_home[i][:player_name] == player
-      return inner_hash_home[i][:shoe]
+  array = []
+  if hash_look[:home][:team_name] == team 
+    i = 0 
+    while i < hash_look[:home][:players].length do 
+      
     end
-    i += 1
+  elsif hash_look[:away][:team_name] == team 
+    
   end
-  
-  k = 0 
-  while k < inner_hash_away.length do 
-    if inner_hash_away[k][:player_name] == player
-      return inner_hash_away[k][:shoe]
-    end
-    k += 1
-  end
+  return array
 end
 
 
