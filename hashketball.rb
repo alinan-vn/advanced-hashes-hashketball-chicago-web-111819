@@ -316,7 +316,6 @@ def winning_team
     away_points += inner_hash_away[k][:points]
     k += 1
   end
-  binding.pry 
   
   if away_points < home_points
     return hash_look[:home][:team_name]
