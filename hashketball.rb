@@ -163,18 +163,11 @@ end
 
 def team_colors(team)
   hash_look = game_hash
-  hash_look.each do |where, innards|
-    innards.each do |name|
-      
-      if name.include?(team)
-        binding.pry
-        thing = hash_look[where][:colors]
-      end
-      
-    end
-    
-  end
-  binding.pry
+  
+  if hash_look[:home][:team_name] == team 
+    return hash_look[:home][:colors]
+  elsif hash_look[:away][:team_name] == team 
+    return hash_look[:away][:colors]
   
 end 
 
@@ -189,7 +182,17 @@ end
 
 
 
-
+# hash_look.each do |where, innards|
+#     innards.each do |name|
+      
+#       if name.include?(team)
+#         binding.pry
+#         return hash_look[where][:colors]
+#       end
+      
+#     end
+    
+#   end
 
 
 
