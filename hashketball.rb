@@ -163,6 +163,7 @@ end
 
 def team_colors(team)
   hash_look = game_hash
+  binding.pry
   if hash_look[:home][:team_name] == team 
     return hash_look[:home][:colors]
   elsif hash_look[:away][:team_name] == team 
