@@ -367,7 +367,7 @@ def long_name_steals_a_ton?
     if (name_length < inner_hash_home[i][:player_name].length)
       name_length = inner_hash_home[i][:player_name].length
       name = inner_hash_home[i][:player_name]
-      long_name_steals = inner_hash_home[i][:player_name]
+      long_name_steals = inner_hash_home[i][:steals]
     end
     i += 1
   end
@@ -377,38 +377,35 @@ def long_name_steals_a_ton?
     if (name_length < inner_hash_away[k][:player_name].length)
       name_length = inner_hash_away[k][:player_name].length
       name = inner_hash_away[k][:player_name]
+      long_name_steals = inner_hash_away[k][:steals]
     end
     k += 1
   end
   
   
   
-  
-  
-  
-  
-  
-  points_scored = 0 
-  name = " "
+  steals = 0 
+  name_2 = " "
   
   i = 0 
   while i < inner_hash_home.length do 
-    if (points_scored < inner_hash_home[i][:points])
-      points_scored = inner_hash_home[i][:points]
-      name = inner_hash_home[i][:player_name]
+    if (steals < inner_hash_home[i][:steals])
+      steals = inner_hash_home[i][:steals]
+      name_2 = inner_hash_home[i][:player_name]
     end
     i += 1
   end
   
   k = 0 
   while k < inner_hash_away.length do 
-    if (points_scored < inner_hash_away[k][:points])
-      points_scored = inner_hash_away[k][:points]
-      name = inner_hash_away[k][:player_name]
+    if (steals < inner_hash_away[k][:steals])
+      steals = inner_hash_away[k][:steals]
+      name_2 = inner_hash_away[k][:player_name]
     end
     k += 1
   end
   
+  return true
 end
 
 
