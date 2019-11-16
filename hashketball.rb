@@ -197,13 +197,17 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-    hash_look = game_hash
+  hash_look = game_hash
   inner_hash_home = hash_look[:home][:players]
   inner_hash_away = hash_look[:away][:players]
+  
   
   i = 0 
   while i < inner_hash_home.length do 
     if inner_hash_home[i][:player_name] == player
+      stat_hash = {
+        
+      }
       return inner_hash_home[i]
     end
     i += 1
