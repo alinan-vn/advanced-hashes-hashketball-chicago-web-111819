@@ -210,12 +210,12 @@ def player_stats(player)
         :shoe => inner_hash_home[i][:shoe],
         :points => inner_hash_home[i][:points],
         :rebounds => inner_hash_home[i][:rebounds],
-        :assists => ,
-        :steals => 3,
-        :blocks => 1,
-        :slam_dunks => 1
+        :assists => inner_hash_home[i][:assists],
+        :steals => inner_hash_home[i][:steals],
+        :blocks => inner_hash_home[i][:blocks],
+        :slam_dunks => inner_hash_home[i][:slam_dunks]
       }
-      return inner_hash_home[i]
+      return stat_hash
     end
     i += 1
   end
@@ -223,7 +223,17 @@ def player_stats(player)
   k = 0 
   while k < inner_hash_away.length do 
     if inner_hash_away[k][:player_name] == player
-      return inner_hash_away[k]
+      stat_hash = {
+        :number => inner_hash_home[k][:number],
+        :shoe => inner_hash_home[k][:shoe],
+        :points => inner_hash_home[k][:points],
+        :rebounds => inner_hash_home[k][:rebounds],
+        :assists => inner_hash_home[k][:assists],
+        :steals => inner_hash_home[k][:steals],
+        :blocks => inner_hash_home[k][:blocks],
+        :slam_dunks => inner_hash_home[k][:slam_dunks]
+      }
+      return stat_hash
     end
     k += 1
   end
