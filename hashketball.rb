@@ -340,7 +340,7 @@ def player_with_longest_name
     end
     i += 1
   end
-  
+  binding.pry
   k = 0 
   while k < inner_hash_away.length do 
     if (name_length < inner_hash_away[k][:player_name].length)
