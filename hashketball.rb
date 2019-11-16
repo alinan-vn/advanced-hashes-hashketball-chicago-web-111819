@@ -249,7 +249,7 @@ def big_shoe_rebounds
   
   i = 0 
   while i < inner_hash_home.length do 
-    if shoe_size < inner_hash_home[i][:shoe] 
+    if (shoe_size < inner_hash_home[i][:shoe])
       shoe_size = inner_hash_home[i][:shoe]
       rebounds = inner_hash_home[i][:rebounds]
     end
@@ -258,7 +258,7 @@ def big_shoe_rebounds
   
   k = 0 
   while k < inner_hash_away.length do 
-    if shoe_size < inner_hash_away[i][:shoe] 
+    if (shoe_size < inner_hash_away[i][:shoe]) 
       shoe_size = inner_hash_away[k][:shoe]
       rebounds = inner_hash_away[k][:rebounds]
     end
