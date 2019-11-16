@@ -268,7 +268,32 @@ def big_shoe_rebounds
   return rebounds
 end
 
-
+def most_points_scored
+  hash_look = game_hash
+  inner_hash_home = hash_look[:home][:players]
+  inner_hash_away = hash_look[:away][:players]
+  
+  points_scored = 0 
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    if (points_scored < inner_hash_home[i][:points])
+      points_scored = inner_hash_home[i][:points]
+    end
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    if (shoe_size < inner_hash_away[k][:shoe]) 
+      shoe_size = inner_hash_away[k][:shoe]
+      rebounds = inner_hash_away[k][:rebounds]
+    end
+    k += 1
+  end
+  
+  return rebounds
+end 
 
 
 
