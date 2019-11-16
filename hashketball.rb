@@ -168,6 +168,7 @@ def team_colors(team)
     return hash_look[:home][:colors]
   elsif hash_look[:away][:team_name] == team 
     return hash_look[:away][:colors]
+  end
   
 end 
 
