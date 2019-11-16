@@ -405,7 +405,10 @@ def long_name_steals_a_ton?
     k += 1
   end
   
-  
+  if name == name_2 
+    return true 
+  else
+    return false
 end
 
 
