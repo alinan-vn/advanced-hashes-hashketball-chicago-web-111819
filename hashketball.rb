@@ -335,16 +335,16 @@ def player_with_longest_name
   i = 0 
   while i < inner_hash_home.length do 
     if (name_length < inner_hash_home[i][:player_name].length)
-      points_scored = inner_hash_home[i][:player_name].length
+      name_length = inner_hash_home[i][:player_name].length
       name = inner_hash_home[i][:player_name]
     end
     i += 1
   end
-  binding.pry
+  
   k = 0 
   while k < inner_hash_away.length do 
     if (name_length < inner_hash_away[k][:player_name].length)
-      points_scored = inner_hash_away[k][:player_name].length
+      name_length = inner_hash_away[k][:player_name].length
       name = inner_hash_away[k][:player_name]
     end
     k += 1
