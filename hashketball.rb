@@ -358,9 +358,56 @@ def long_name_steals_a_ton?
   inner_hash_home = hash_look[:home][:players]
   inner_hash_away = hash_look[:away][:players]
   
-  long_name = player_with_longest_name #Bismack dude
+  name_length = 0 
+  name = " "
+  long_name_steals = 0
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    if (name_length < inner_hash_home[i][:player_name].length)
+      name_length = inner_hash_home[i][:player_name].length
+      name = inner_hash_home[i][:player_name]
+      long_name_steals = inner_hash_home[i][:player_name]
+    end
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    if (name_length < inner_hash_away[k][:player_name].length)
+      name_length = inner_hash_away[k][:player_name].length
+      name = inner_hash_away[k][:player_name]
+    end
+    k += 1
+  end
   
   
+  
+  
+  
+  
+  
+  
+  points_scored = 0 
+  name = " "
+  
+  i = 0 
+  while i < inner_hash_home.length do 
+    if (points_scored < inner_hash_home[i][:points])
+      points_scored = inner_hash_home[i][:points]
+      name = inner_hash_home[i][:player_name]
+    end
+    i += 1
+  end
+  
+  k = 0 
+  while k < inner_hash_away.length do 
+    if (points_scored < inner_hash_away[k][:points])
+      points_scored = inner_hash_away[k][:points]
+      name = inner_hash_away[k][:player_name]
+    end
+    k += 1
+  end
   
 end
 
